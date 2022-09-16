@@ -1,0 +1,229 @@
+:root {
+    --var-cream: #F3EAE3;
+    --var-green: #3D8168;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.container {
+    width: 80%;
+    max-width: 1440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+}
+
+.row {
+    display: flex;
+    
+    
+}
+
+/* Utility */
+
+.bg_primary {
+    background-color: var(--var-cream);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* #region main */
+
+.img,
+.content {
+    flex-basis: 20%;
+}
+
+.img img {
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+   
+}
+
+.mobile {
+    display: none;
+}
+
+.content {
+    background-color: white;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 0 10px 10px 0;
+}
+
+.content>* {
+    padding: 0.6rem 0;
+}
+
+.type {
+    letter-spacing: 0.25em;
+    font-weight: lighter;
+    font-size: 12px;
+
+}
+
+.type,
+.description,
+.discount {
+    color: hsl(228, 12%, 48%);
+}
+
+
+
+.title,
+.price {
+    font-family: 'Fraunces', serif;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: hsl(212, 21%, 14%)
+}
+
+
+.description {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+
+
+.price {
+    color: var(--var-green);
+    font-family: 'Fraunces';
+    font-size: 28px;
+    line-height: 35px;
+    
+}
+
+.discount {
+    text-decoration: line-through;
+    font-size: 12px;
+    margin-left: 1rem;
+}
+
+.button {
+    width: 100%;
+    
+}
+
+
+.add_to_cart {
+    width: 100%;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    background-color: var(--var-green);
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+
+}
+
+.button i {
+    margin-right: 0.5rem;
+}
+
+.button a {
+    transition: opacity 0.3s ease;
+}
+
+.button:hover a {
+    opacity: 0.75;
+}
+
+/* #endregion */
+
+
+@media  screen and (min-width: 640px) and (max-width: 1440px) {
+    
+
+    .container {
+        width: 100%;
+    }
+
+    .img, .content {
+        flex-basis: 30%
+    }
+
+    .title {
+        width: 100%;
+    }
+
+    
+}
+
+
+
+@media screen and (max-width: 640px) {
+
+    .type {
+        letter-spacing: 0.4em;
+    }
+
+    .container {
+        max-width: 375px;
+        width: 90%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+
+    .img img {
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .content {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .price_box {
+        width: 60%;
+    }
+
+    
+    .row {
+        flex-direction: column;
+        
+    }
+    
+    
+}    
