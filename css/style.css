@@ -14,6 +14,8 @@
 
 img {
     max-width: 100%;
+    display: block;
+    object-fit: cover;
     
 }
 
@@ -59,26 +61,23 @@ a {
 
 /* #region main */
 
-.img,
-.content {
-    flex-basis: 20%;
+
+picture, .content {
+    flex-basis: 25%
 }
 
-.img img {
+picture img {
+    border-radius: 0.625rem 0 0 0.625rem;
     height: 100%;
-    border-radius: 10px 0 0 10px;
    
 }
-
-.mobile {
-    display: none;
-}
+ 
 
 .content {
     background-color: white;
     flex-direction: column;
     padding: 1.5rem;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 0.625rem 0.635rem 0;
 }
 
 .content>* {
@@ -88,7 +87,7 @@ a {
 .type {
     letter-spacing: 0.25em;
     font-weight: lighter;
-    font-size: 12px;
+    font-size: 0.75rem;
 
 }
 
@@ -106,49 +105,39 @@ a {
 }
 
 .title {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     color: hsl(212, 21%, 14%)
 }
 
 
 .description {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
 }
-
-
-
 
 .price {
     color: var(--var-green);
     font-family: 'Fraunces';
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 1.75rem;
+    line-height: 2.188rem;
     
 }
 
 .discount {
     text-decoration: line-through;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin-left: 1rem;
 }
 
-.button {
-    width: 100%;
-    
-}
-
-
 .add_to_cart {
-    width: 100%;
     display: inline-block;
     padding: 0.8rem 2rem;
     text-align: center;
     background-color: var(--var-green);
     color: white;
-    border-radius: 10px;
-    font-size: 12px;
+    border-radius: 0.625rem;
+    font-size: 0.75rem;
 
 }
 
@@ -156,21 +145,21 @@ a {
     margin-right: 0.5rem;
 }
 
-.button a {
+.button {
     transition: opacity 0.3s ease;
 }
 
-.button:hover a {
+.button:hover {
     opacity: 0.75;
 }
 
 /* #endregion */
 
 
-@media  screen and (min-width: 640px) and (max-width: 1440px) {
+@media  screen and (min-width: 640px) and (max-width: 1200px) {
     
-    .img, .content {
-        flex-basis: 25%
+    picture, .content {
+        flex-basis: 40%
     }
 
     .title {
@@ -193,27 +182,17 @@ a {
         width: 90%;
     }
 
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
-        display: block;
-    }
-
-
-    .img img {
-        border-radius: 10px 10px 0 0 ;
+    picture img {
+        border-radius: 0.625rem 0.625rem 0 0 ;
     }
 
     .content {
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 0  0.625rem 0.625rem;
     }
 
     .price_box {
         width: 60%;
     }
-
     
     .row {
         flex-direction: column;
